@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling Salesman Problem Solver</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Traveling Salesman Problem Solver</h1>
+
+        <div>
+            <h2>Current Cities:</h2>
+            <ul id="cityList" class="city-list"></ul>
+        </div>    
+
+        <div>
+            <label for="cityName">City Name:</label>
+            <input type="text" id="cityName" placeholder="Enter city name">
+            <label for="latitude">Latitude:</label>
+            <input type="number" id="latitude" step="0.000001" placeholder="Enter latitude">
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" step="0.000001" placeholder="Enter longitude">
+            <button onclick="addCity()">Add City</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="solveTSP()">Find Optimal Route</button>
+            <canvas id="mapCanvas" width="800" height="600"></canvas>
+        </div>
+        <div id="map"></div>
+        <div>
+            <h2>Total Distance:</h2>
+            <p id="totalDistance"></p>
+        </div>
+
+        <div>
+            <h2>Optimal Route:</h2>
+            <ul id="tspCityList" class="city-list"></ul>
+        </div>
+    
+        
+
+    <script src="script.js"></script>
+</body>
+</html>
